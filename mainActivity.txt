@@ -1,0 +1,251 @@
+
+public class activityMain{
+    public static void main (String args[]){
+    
+     int balance = 50;
+    
+     System.out.println("Press 1 to make a WITHDRAW ,Press 2 to make a DEPOSIT");
+     int first = Keyboard.readInt();
+     
+     if (first == 1){
+         
+         System.out.println("Debit or Credit card?");
+         String DC = Keyboard.readString();
+         
+            if(DC.equals("Credit")){
+            //Credit card withdraw code    
+            
+            System.out.println("Your account balance is : $" + balance);
+            System.out.println("How much would you like to withdraw?");
+            System.out.println("$10 , $20 , $50 , $100 , $200 , $500");
+            int withdraw = Keyboard.readInt();
+            
+            switch (withdraw){
+                    case 10:
+                        balance = balance - 10;
+                        System.out.println("Ammount successfully removed from your account!");
+                        System.out.println("Your account balance is : $" + balance);
+                    break;
+                    case 20:
+                        balance = balance - 20;
+                        System.out.println("Ammount successfully removed from your account!");
+                        System.out.println("Your account balance is : $" + balance);
+                    break;
+                    case 50:
+                        balance = balance - 50;
+                        System.out.println("Ammount successfully removed to your account!");
+                        System.out.println("Your account balance is : $" + balance);
+                    break;
+                    case 100:
+                        balance = balance - 100;
+                        System.out.println("Ammount successfully removed your account!");
+                        System.out.println("Your account balance is : $" + balance);
+                    break;
+                    case 200:
+                        balance = balance - 200;
+                        System.out.println("Ammount successfully removed from your account!");
+                        System.out.println("Your account balance is : $" + balance);
+                    break;
+                    case 500:
+                        balance = balance - 500;
+                        System.out.println("Ammount successfully removed from your account!");
+                        System.out.println("Your account balance is : $" + balance);
+                    break;
+                    
+                    default:
+                    throw new IllegalArgumentException("Invalid Input! Please enter a vald input...");
+            
+            
+            
+            }
+        }
+            
+            if(DC.equals("Debit")){
+            //Debit card withdraw code 
+            
+            System.out.println("Your account balance is : $" + balance);
+            System.out.println("How much would you like to withdraw?");
+            System.out.println("$10 , $20 , $50 , $100 , $200 , $500");
+            int witdraw = Keyboard.readInt();
+            
+            switch (witdraw){
+                    case 10:
+                        balance = balance - 10;
+                        if (balance <= 0){
+                            System.out.println("Insufficient Funds..");
+                            balance = balance +10;
+                            System.out.println("Your account balance is : $" + balance);
+                        }else{
+                            System.out.println("Ammount successfully removed from your account");
+                            System.out.println("Your account balance is : $" + balance);
+                        }
+                    break;
+                    case 20:
+                        balance = balance - 20;
+                        if (balance <= 0){
+                            System.out.println("Insufficient Funds..");
+                            balance = balance + 20;
+                            System.out.println("Your account balance is : $" + balance);
+                        }else{
+                            System.out.println("Ammount successfully removed from your account");
+                            System.out.println("Your account balance is : $" + balance);
+                        }
+                    break;
+                    case 50:
+                        balance = balance - 50;
+                        if (balance <= 0){
+                            System.out.println("Insufficient Funds..");
+                            balance = balance + 50;
+                            System.out.println("Your account balance is : $" + balance);
+                        }else{
+                            System.out.println("Ammount successfully removed from your account");
+                            System.out.println("Your account balance is : $" + balance);
+                        }
+                    break;
+                    case 100:
+                        balance = balance - 100;
+                        if (balance <= 0){
+                            System.out.println("Insufficient Funds..");
+                            balance = balance + 100;
+                            System.out.println("Your account balance is : $" + balance);
+                        }else{
+                            System.out.println("Ammount successfully removed from your account");
+                            System.out.println("Your account balance is : $" + balance);
+                        }
+                    break;
+                    case 200:
+                        balance = balance - 200;
+                        if (balance <= 0){
+                            System.out.println("Insufficient Funds..");
+                            balance = balance + 200;
+                            System.out.println("Your account balance is : $" + balance);
+                        }else{
+                            System.out.println("Ammount successfully removed from your account");
+                            System.out.println("Your account balance is : $" + balance);
+                        }
+                    break;
+                    case 500:
+                        balance = balance - 500;
+                        if (balance <= 0){
+                            System.out.println("Insufficient Funds..");
+                            balance = balance + 500;
+                            System.out.println("Your account balance is : $" + balance);
+                        }else{
+                            System.out.println("Ammount successfully removed from your account");
+                            System.out.println("Your account balance is : $" + balance);
+                        }
+                    break;
+                    
+                    default:
+                    throw new IllegalArgumentException("Invalid Input! Please enter a vald input...");
+                    
+                }                           
+            }
+        
+     }else if (first == 2){
+        
+         System.out.println("Debit or Credit card?");
+         String DeC = Keyboard.readString();
+         
+            if(DeC.equals("Credit")){
+            //Deposit credit card code
+            
+            System.out.println("Your account balance is : $" + balance);
+            System.out.println("How much would you like to deposit to your account ?");
+            System.out.println("$10 , $20 , $50 , $100 , $200 , $500");
+            int ammount = Keyboard.readInt();
+            
+                switch (ammount){
+                    case 10:
+                        balance = balance + 10;
+                        System.out.println("Ammount successfully added to your account!");
+                        System.out.println("Your account balance is : $" + balance);
+                    break;
+                    case 20:
+                        balance = balance + 20;
+                        System.out.println("Ammount successfully added to your account!");
+                        System.out.println("Your account balance is : $" + balance);
+                    break;
+                    case 50:
+                        balance = balance + 50;
+                        System.out.println("Ammount successfully added to your account!");
+                        System.out.println("Your account balance is : $" + balance);
+                    break;
+                    case 100:
+                        balance = balance + 100;
+                        System.out.println("Ammount successfully added to your account!");
+                        System.out.println("Your account balance is : $" + balance);
+                    break;
+                    case 200:
+                        balance = balance + 200;
+                        System.out.println("Ammount successfully added to your account!");
+                        System.out.println("Your account balance is : $" + balance);
+                    break;
+                    case 500:
+                        balance = balance + 500;
+                        System.out.println("Ammount successfully added to your account!");
+                        System.out.println("Your account balance is : $" + balance);
+                    break;
+                    
+                    default:
+                    throw new IllegalArgumentException("Invalid Input! Please enter a vald input...");
+                    
+                }                                   
+            }
+            if(DeC.equals("Debit")){
+            //Debit card deposit code
+            
+            System.out.println("Your account balance is : $" + balance);
+            System.out.println("How much would you like to deposit to your account ?");
+            System.out.println("$10 , $20 , $50 , $100 , $200 , $500");
+            int ammount = Keyboard.readInt();
+            
+                switch (ammount){
+                    case 10:
+                        balance = balance + 10;
+                        System.out.println("Ammount successfully added to your account!");
+                        System.out.println("Your account balance is : $" + balance);
+                    break;
+                    case 20:
+                        balance = balance + 20;
+                        System.out.println("Ammount successfully added to your account!");
+                        System.out.println("Your account balance is : $" + balance);
+                    break;
+                    case 50:
+                        balance = balance + 50;
+                        System.out.println("Ammount successfully added to your account!");
+                        System.out.println("Your account balance is : $" + balance);
+                    break;
+                    case 100:
+                        balance = balance + 100;
+                        System.out.println("Ammount successfully added to your account!");
+                        System.out.println("Your account balance is : $" + balance);
+                    break;
+                    case 200:
+                        balance = balance + 200;
+                        System.out.println("Ammount successfully added to your account!");
+                        System.out.println("Your account balance is : $" + balance);
+                    break;
+                    case 500:
+                        balance = balance + 500;
+                        System.out.println("Ammount successfully added to your account!");
+                        System.out.println("Your account balance is : $" + balance);
+                    break;
+                    
+                    default:
+                    throw new IllegalArgumentException("Invalid Input! Please enter a vald input...");
+                    
+                }       
+            }
+            
+        
+        
+     }else{
+        
+         System.out.println("Invalid operation..");
+        
+        }
+    }      
+     }
+    
+  
